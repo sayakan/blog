@@ -31,9 +31,8 @@ menu:
           weight: 20
 
 params:
-
     title: "In step with the times"
-    description: "Tech Blog of sayakan, a software engineer"
+    description: "Tech Blog of Sayaka Nakagawa, a software engineer in Japan."
     author: Sayaka Nakagawa
 
     defaultTheme: auto
@@ -51,8 +50,8 @@ params:
     ShareButtons: ["linkedin", "twitter", "facebook", "reddit", "whatsapp"]
 
     homeInfoParams:
-        Title: Hi there wave
-        Content: Can be Info, links, about...
+        Title: "In step with the times"
+        Content: "Tech Blog of Sayaka Nakagawa, a software engineer in Japan."
     socialIcons:
       - name: github
         url: "https://github.com/sayakan"
@@ -67,16 +66,15 @@ outputs:
     - RSS
     - JSON
     
-
 markup:
     goldmark:
         renderer:
             unsafe: true
     highlight:
         noClasses: false
-        # anchorLineNos: true
-        # codeFences: true
-        # guessSyntax: true
-        # lineNos: true
-        # style: monokai
+        anchorLineNos: true
+        codeFences: true
+        guessSyntax: true
+        lineNos: true
+        style: monokai
 
