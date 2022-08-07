@@ -1,4 +1,4 @@
-baseURL: https://sayakan.github.io/
+baseURL: https://sayakan.github.io/blog/
 publishDir: "docs"
 theme: "PaperMod"
 paginate: 5
@@ -18,35 +18,33 @@ minify:
   disableXML: true
   minifyOutput: true
 
-languages:
-    en:
-        languageName: "English"
-        weight: 1
-        taxonomies:
-          category: categories
-          tag: tags
-          series: series
-        menu:
-            main:
-                - name: Archive
-                  url: archives
-                  weight: 5
-                - name: Search
-                  url: search/
-                  weight: 10
-                - name: Tags
-                  url: tags/
-                  weight: 10
+menu:
+    main:
+        - name: Archive
+          url: archives
+          weight: 10
+        - name: Search
+          url: search/
+          weight: 15
+        - name: Tags
+          url: tags/
+          weight: 20
 
 params:
+
+    title: "In step with the times"
+    description: "Tech Blog of sayakan, a software engineer"
+    author: Sayaka Nakagawa
+
     defaultTheme: auto
-    ShowShareButtons: true
+
     ShowReadingTime: true
-    displayFullLangName: true
+    ShowShareButtons: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
     ShowRssButtonInSectionTermList: true
+    displayFullLangName: true
     ShowToc: true
     TocOpen: true
     comments: true
