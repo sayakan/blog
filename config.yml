@@ -1,8 +1,10 @@
 baseURL: https://sayakan.github.io/blog
 publishDir: "docs"
-title: In step with the times
 theme: "PaperMod"
 paginate: 5
+canonifyurls: false
+
+title: In step with the times
 
 enableEmoji: true
 enableRobotsTXT: true
