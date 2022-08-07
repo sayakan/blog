@@ -1,4 +1,4 @@
-baseURL: https://sayakan.github.io/blog
+baseURL: https://sayakan.github.io/
 publishDir: "docs"
 theme: "PaperMod"
 paginate: 5
