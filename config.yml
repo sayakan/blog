@@ -1,3 +1,82 @@
-baseURL: http://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: https://sayakan.github.io/blog
+publishDir: "docs"
+title: In step with the times
+theme: "PaperMod"
+paginate: 5
+
+enableEmoji: true
+enableRobotsTXT: true
+enableInlineShortcodes: true
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        menu:
+            main:
+                - name: Archive
+                  url: archives
+                  weight: 5
+                - name: Search
+                  url: search/
+                  weight: 10
+                - name: Tags
+                  url: tags/
+                  weight: 10
+
+params:
+    defaultTheme: auto
+    ShowShareButtons: true
+    ShowReadingTime: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowToc: true
+    TocOpen: true
+    comments: true
+    ShareButtons: ["linkedin", "twitter", "facebook", "reddit", "whatsapp"]
+
+    homeInfoParams:
+        Title: Hi there wave
+        Content: Can be Info, links, about...
+    socialIcons:
+      - name: github
+        url: "https://github.com/sayakan"
+      - name: twitter
+        url: "https://twitter.com"
+      - name: RSS
+        url: "index.xml"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+    
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        noClasses: false
+        # anchorLineNos: true
+        # codeFences: true
+        # guessSyntax: true
+        # lineNos: true
+        # style: monokai
+
