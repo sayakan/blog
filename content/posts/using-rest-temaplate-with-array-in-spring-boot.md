@@ -1,5 +1,5 @@
 ---
-title: "Spring Boot RestTemplate を使った REST API リクエスト時に List オブジェクトを返す方法"
+title: "Spring Boot RestTemplate を使った REST API リクエスト時に List オブジェクトを Entity クラスとしてマッピングする方法
 date: 2022-08-09T06:35:08+09:00
 tags: ["Spring Boot", "RestTemplate", "Java"]
 ---
@@ -15,7 +15,7 @@ tags: ["Spring Boot", "RestTemplate", "Java"]
 
 # サンプルコードと１つのオブジェクトを受け取る場合の実装方法
 
-## Entity class ※[公式](https://spring.pleiades.io/guides/gs/consuming-rest/)から拝借
+## Entity classes ※[公式](https://spring.pleiades.io/guides/gs/consuming-rest/)から拝借
 
 ```java
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
