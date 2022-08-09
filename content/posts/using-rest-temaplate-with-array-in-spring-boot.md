@@ -94,7 +94,7 @@ List<Quote> result = response.getBody();
 
 ### ポイント
 4. `List.of()` で囲むことによって要素の追加・削除ができない配列を生成する。`Objects.requireNonNull()` で引数が null の場合に例外を出すようにする。
-- `ParameterizedTypeReference` という方法もあります。
+   - `ParameterizedTypeReference` を使用するという方法もあります。
 
 # References
 - https://spring.pleiades.io/guides/gs/consuming-rest/
