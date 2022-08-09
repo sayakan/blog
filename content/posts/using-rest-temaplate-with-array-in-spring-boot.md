@@ -95,6 +95,11 @@ List<Quote> result = response.getBody();
 ### ポイント
 4. `List.of()` で囲むことによって要素の追加・削除ができない配列を生成する。`Objects.requireNonNull()` で引数が null の場合に例外を出すようにする。
    - `ParameterizedTypeReference` を使用するという方法もあります。
+  ```java
+  ResponseEntity<List<Quote>> response = restTemplate.exchange(url, HttpMethod.GET, null,
+    new ParameterizedTypeReference<List<Quote>>(){});
+  List<Quote> result = response.getBody();
+```
 
 # References
 - https://spring.pleiades.io/guides/gs/consuming-rest/
