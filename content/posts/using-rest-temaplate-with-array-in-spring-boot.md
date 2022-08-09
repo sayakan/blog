@@ -1,5 +1,5 @@
 ---
-title: "Spring Boot RestTemplate を使った REST API リクエスト時に List オブジェクトを Entity クラスとしてマッピングする方法
+title: "Spring Boot RestTemplate を使った REST API リクエスト時に List オブジェクトを Entity クラスとしてマッピングする方法"
 date: 2022-08-09T06:35:08+09:00
 tags: ["Spring Boot", "RestTemplate", "Java"]
 ---
