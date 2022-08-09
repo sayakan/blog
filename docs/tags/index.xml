@@ -5,7 +5,34 @@
     <link>https://sayakan.github.io/blog/tags/</link>
     <description>Recent content in Tags on In step with the times</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Aug 2022 11:07:34 +0900</lastBuildDate><atom:link href="https://sayakan.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Aug 2022 06:35:08 +0900</lastBuildDate><atom:link href="https://sayakan.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>https://sayakan.github.io/blog/tags/java/</link>
+      <pubDate>Tue, 09 Aug 2022 06:35:08 +0900</pubDate>
+      
+      <guid>https://sayakan.github.io/blog/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RestTemplate</title>
+      <link>https://sayakan.github.io/blog/tags/resttemplate/</link>
+      <pubDate>Tue, 09 Aug 2022 06:35:08 +0900</pubDate>
+      
+      <guid>https://sayakan.github.io/blog/tags/resttemplate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring Boot</title>
+      <link>https://sayakan.github.io/blog/tags/spring-boot/</link>
+      <pubDate>Tue, 09 Aug 2022 06:35:08 +0900</pubDate>
+      
+      <guid>https://sayakan.github.io/blog/tags/spring-boot/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>memo</title>
       <link>https://sayakan.github.io/blog/tags/memo/</link>

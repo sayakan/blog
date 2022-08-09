@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sayakan.github.io/blog/</loc>
+    <lastmod>2022-08-09T06:35:08+09:00</lastmod>
+  </url><url>
+    <loc>https://sayakan.github.io/blog/tags/java/</loc>
+    <lastmod>2022-08-09T06:35:08+09:00</lastmod>
+  </url><url>
+    <loc>https://sayakan.github.io/blog/posts/</loc>
+    <lastmod>2022-08-09T06:35:08+09:00</lastmod>
+  </url><url>
+    <loc>https://sayakan.github.io/blog/tags/resttemplate/</loc>
+    <lastmod>2022-08-09T06:35:08+09:00</lastmod>
+  </url><url>
+    <loc>https://sayakan.github.io/blog/tags/spring-boot/</loc>
+    <lastmod>2022-08-09T06:35:08+09:00</lastmod>
+  </url><url>
+    <loc>https://sayakan.github.io/blog/posts/using-rest-temaplate-with-array-in-spring-boot/</loc>
+    <lastmod>2022-08-09T06:35:08+09:00</lastmod>
+  </url><url>
+    <loc>https://sayakan.github.io/blog/tags/</loc>
+    <lastmod>2022-08-09T06:35:08+09:00</lastmod>
+  </url><url>
     <loc>https://sayakan.github.io/blog/posts/first-post/</loc>
     <lastmod>2022-08-07T11:07:34+09:00</lastmod>
   </url><url>
-    <loc>https://sayakan.github.io/blog/</loc>
-    <lastmod>2022-08-07T11:07:34+09:00</lastmod>
-  </url><url>
     <loc>https://sayakan.github.io/blog/tags/memo/</loc>
-    <lastmod>2022-08-07T11:07:34+09:00</lastmod>
-  </url><url>
-    <loc>https://sayakan.github.io/blog/posts/</loc>
-    <lastmod>2022-08-07T11:07:34+09:00</lastmod>
-  </url><url>
-    <loc>https://sayakan.github.io/blog/tags/</loc>
     <lastmod>2022-08-07T11:07:34+09:00</lastmod>
   </url><url>
     <loc>https://sayakan.github.io/blog/archives/</loc>
