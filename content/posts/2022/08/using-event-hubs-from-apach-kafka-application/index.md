@@ -18,7 +18,7 @@ Event Hubs はフルマネージドの PaaS であるため、Kafka などを用
 - ソースコードに関しては、公式が提供している [Java を使用して Azure Event Hubs との間でイベントを送受信する (azure-messaging-eventhubs)](https://docs.microsoft.com/ja-jp/azure/event-hubs/event-hubs-java-get-started-send) を使用する
   - 補足：Kafka アプリケーションを Java で書いているため今回は Java で試す。
 
-## Azure Event Hubs との間でイベントを送受信する際の注意点
+## チュートリアルを使用して Azure Event Hubs との間でイベントを送受信する際の注意点
 ### Maven で作成した Empty Project の pom.xml に以下を追加する。
 ```xml
     <dependency>
@@ -30,11 +30,12 @@ Event Hubs はフルマネージドの PaaS であるため、Kafka などを用
 - この際、必ず Maven をリロードすること。
 ![reload-maven](reload-maven.png)
 
-### Event Hubs へ接続する際に使用する接続文字列は以下の通り
+### Event Hubs へ接続する際に使用する接続文字列の取得方法
 ```
 Endpoint=sb://<NamespaceName>.servicebus.windows.net/;SharedAccessKeyName=<KeyName>;SharedAccessKey=<KeyValue>
 ```
-- https://docs.microsoft.com/ja-jp/azure/event-hubs/event-hubs-get-connection-string
+
+- 詳細については[こちら](https://docs.microsoft.com/ja-jp/azure/event-hubs/event-hubs-get-connection-string) に確認手順が書かれている。
 
 
 # References
