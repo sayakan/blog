@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://sayakan.github.io/blog/sitemap.xml
