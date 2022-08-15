@@ -1,8 +1,10 @@
 ---
-title: "What Is Blob"
+title: "Azure Blob Storage とは何か"
 date: 2022-08-15T01:59:59+09:00
 tags: ["Azure Blob Storage", "Azure"]
 ---
+
+Azure Blob Storage について、Amazon S3 と類似しているサービスであることは知っていますが、機能についてよくわかっていないのでメモを残していこうと思います。まずは概要から。
 
 # 概要
 ## [Azure Blob Storage](https://docs.microsoft.com/ja-jp/azure/storage/blobs/storage-blobs-introduction) とは
@@ -56,4 +58,6 @@ http://mystorageaccount.blob.core.windows.net
 
 # References
 - https://docs.microsoft.com/ja-jp/azure/storage/blobs/storage-blobs-introduction
-  - 基本的にこの資料を自分用にメモしただけ
+  - 基本的に概要はこの資料を自分用にメモしただけ
+- https://docs.microsoft.com/ja-jp/azure/storage/blobs/storage-quickstart-blobs-portal
+  - 実際にチュートリアルを行うのであればこの辺りから進めたら良さそう
