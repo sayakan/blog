@@ -2,7 +2,7 @@
 title: "Apach Kafka Application から Azure Event Hubs にアクセスする"
 date: 2022-08-14T23:58:21+09:00
 draft: true
-tags: ["Event Hubs", "Apach Kafka", "Event Hubs", "Azure"]
+tags: ["Event Hubs", "Apach Kafka", "Event Hubs", "Azure", "Spring Boot"]
 ---
 
 [Azure Event Hubs](https://docs.microsoft.com/ja-jp/azure/event-hubs/event-hubs-about) は、データをある場所から別の場所に転送して更なる処理や分析をするためのストリーミングデータインジェストサービスのこと。なんらかのデータイベントが発生するたびにストリーミング処理を行うことからイベントインジェスターともいう。
@@ -35,7 +35,9 @@ Event Hubs はフルマネージドの PaaS であるため、Kafka などを用
 Endpoint=sb://<NamespaceName>.servicebus.windows.net/;SharedAccessKeyName=<KeyName>;SharedAccessKey=<KeyValue>
 ```
 
-- 詳細については[こちら](https://docs.microsoft.com/ja-jp/azure/event-hubs/event-hubs-get-connection-string) に確認手順が書かれている。
+- 詳細については[こちら](https://docs.microsoft.com/ja-jp/azure/event-hubs/event-hubs-get-connection-string) に確認手順が書かれているため参照のこと。
+
+
 
 
 # References
