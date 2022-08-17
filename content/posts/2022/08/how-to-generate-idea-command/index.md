@@ -10,10 +10,7 @@ tags: ["Linux", "IntelliJ"]
 # 現象
 まず見たのは[こちら](https://pleiades.io/help/idea/working-with-the-ide-features-from-command-line.html#toolbox)で、簡単そうだったので Toolbox を install した。
 
-```bash
-/usr/local/bin
-```
-しかし公式の手順通り Toolbox 上で上記を Shell scripts location に設定しても `The specified directory is not writable` とエラーが表示された。
+しかし公式の手順通り Toolbox 上で `/usr/local/bin` を Shell scripts location に設定しても `The specified directory is not writable` とエラーが表示された。
 
 # 解決方法
 結論から言うと書き込み権限の付与を行うことで解消された。
@@ -26,31 +23,32 @@ sudo chmod 777 /usr/local/bin
 
 ## 操作手順
 
-初期値は以下のようになっていた。
+作業した手順を記載しておく。初期値は以下のようになっていた。
 
 ```bash
-$ ls -l /usr/local
-
+ls -l /usr/local
 drwxr-xr-x 19 root  wheel  608 Jul 13 00:27 bin/
 ```
 
 root ユーザー以外の書き込み権限は確かにないため以下の通り権限を与える。
 
 ```bash
-$ sudo chmod 777 /usr/local/bin
+sudo chmod 777 /usr/local/bin
 ```
 
-上記コマンドによって権限が以下のように更新されたこと、idea ファイルが新たに生成されたことが確認できた。
+上記コマンドによって、以下が確認できた。
 
 ```bash
-$ ls -l /usr/local
+# 権限が以下のように更新されたこと
+ls -l /usr/local
 drwxrwxrwx  25 root  wheel  800 Aug 17 21:00 bin/
 
-$ ls -l /usr/local/bin
+# idea ファイルが新たに生成されたこと
+ls -l /usr/local/bin/
 -rwxr-xr-x  1 sayakan  wheel       487 Aug 17 21:00 idea*
 ```
 
-以上で終了だが、`/usr/local/bin/` の権限をこのままフルにしておくのは気が引けるので以下の通り元に戻しておいた。
+以上で終了だが、`/usr/local/bin/` の権限をこのままフルにしておくのは気が引けるので以下コマンドによって元の権限に戻しておいた。
 
 ```bash
 sudo chmod 755 /usr/local/bin/
