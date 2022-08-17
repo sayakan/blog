@@ -2,7 +2,6 @@
 title: "IntelliJ idea コマンドを使えるようにする方法 (The specified directory is not writable への対応)"
 date: 2022-08-17T21:07:52+09:00
 tags: ["Linux", "IntelliJ"]
-draft: true
 ---
 
 コマンドラインに `idea .` と打つと IDE が開いて欲しかったが、デフォルトでは使えなかったためやり方をまとめた
