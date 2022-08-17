@@ -49,7 +49,7 @@ Azure Storage Blob に関する概要は[別記事](../what-is-blob/)にまと�
 - 送信イベント用プロジェクトと同様に pom.xml ファイルを更新後リロードすることを忘れないようにする
 
 # 終わりに
-手順どおりにやればかなり簡単にできた。次は[こちら](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/java)を試す
+手順どおりにやればかなり簡単にできた。次は[こちら](https://github.com/Azure/azure-event-hubs-for-kafka/tree/master/quickstart/java)を試す。
 
 
 # References
