@@ -6,6 +6,13 @@ tags: ["Linux", "IntelliJ"]
 
 コマンドラインに `idea .` と打つと IDE が開いて欲しかったが、デフォルトでは使えなかったためやり方をまとめた
 
+# 環境
+|  Name  |  Version  |
+| ---- | ---- |
+|  macOS Monterey(M1 Macbook Pro) |  12.1 |
+|  JetBrains Toolbox App  |  1.25  |
+|  IntelliJ IDEA (Ultimate Edition) |  2022.2 |
+
 
 # 現象
 まず見たのは[こちら](https://pleiades.io/help/idea/working-with-the-ide-features-from-command-line.html#toolbox)で、簡単そうだったので Toolbox を install した。
