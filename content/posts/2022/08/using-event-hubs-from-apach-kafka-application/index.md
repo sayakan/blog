@@ -1,7 +1,7 @@
 ---
-title: "Apach Kafka Application から Azure Event Hubs にアクセスする"
+title: "Spring Boot Application から Azure Event Hubs にアクセスする"
 date: 2022-08-14T23:58:21+09:00
-tags: ["Event Hubs", "Apach Kafka", "Event Hubs", "Azure", "Spring Boot", "Azure Blob Storage"]
+tags: ["Event Hubs", "Event Hubs", "Azure", "Spring Boot", "Azure Blob Storage"]
 ---
 
 # Event Hubs とは
@@ -11,13 +11,13 @@ tags: ["Event Hubs", "Apach Kafka", "Event Hubs", "Azure", "Spring Boot", "Azure
 イベントインジェスターとは、例えば [イベント駆動ドリブン](https://docs.microsoft.com/ja-jp/azure/architecture/guide/architecture-styles/event-driven) はイベントパブリッシャー・イベントコンシューマーを構成するが、そのイベントを処理するためにイベントパブリッシャーとイベントコンシューマーの間に置かれる。
 
 Event Hubs はフルマネージドの PaaS であるため、Kafka などを用いたい場合におけるクラスター管理・構成などの設計・構築が大幅に軽減される。
-今回は Event Hubs を使用して Kafka アプリケーションを使用する手順に関してまとめていく。
+今回は Spring Boot アプリケーションから Event Hubs を使用する手順に関してまとめていく。
 
 # やってみる
 ## リソースを準備する
 - Event Hubs を構築するには [公式のクイックスタート](https://docs.microsoft.com/ja-jp/azure/event-hubs/event-hubs-create) を活用すると良さそう。
 - ソースコードに関しては、公式が提供している [Java を使用して Azure Event Hubs との間でイベントを送受信する (azure-messaging-eventhubs)](https://docs.microsoft.com/ja-jp/azure/event-hubs/event-hubs-java-get-started-send) の手順に沿ってサンプル実装を行う
-  - 補足：Kafka アプリケーションを Java で書いているため今回は Java で試す。
+  - 補足：仕事の Kafka アプリケーションを Java で書いているため今回は Java で試す。
   - 送信イベント用 Maven プロジェクトと受信イベント用 Maven プロジェクトを作成して送受信を試す
   - 以後は **注意点のみ記載しているため詳細な手順は上記チュートリアルを確認すること**
 
