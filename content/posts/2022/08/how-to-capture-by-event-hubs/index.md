@@ -34,15 +34,16 @@ mvn clean package
 mvn exec:java -Dexec.mainClass="TestConsumer"
 ```
 
+今回は100メッセージを同時に送っており、下記ログによって受信したことがわかる。
 ![testConsumer.png](testConsumer.png)
 
 ### Blob を確認する
 
-設定しておいたストレージアカウントの指定コンテナに以下のように保存されることが確認できた。100メッセージを同時に送っているためデフォルトでは日時別に保存されている。
+設定しておいたストレージアカウントの指定コンテナに以下のように保存されることが確認できた。デフォルトでは日時別に保存されている。
 ![blob.png](blob.png)
 
 # 終わりに
-ファイル内をみるには[この辺り](https://github.com/microsoft/AzureStorageExplorer)を使う必要がありそう
+ファイル内をみるには ~~[この辺り](https://github.com/microsoft/AzureStorageExplorer)を使う必要がありそう~~ 8/19 追記：試したが Avro ファイルは開けず別の対応が必要みたい。要調査
 
 # References
 - 公式ドキュメントだと以下のあたりが参考になりそう。
