@@ -2,7 +2,6 @@
 title: "Lombok のアノテーション"
 date: 2022-09-27T09:17:42+09:00
 tags: ["Java", "Lombok"]
-draft: true
 ---
 
 # はじめに
@@ -119,7 +118,50 @@ public class Person3 {
 }
 ```
 
-## TODO
+## その他
+- コンストラクタのアクセス制御する方法
+```java
+@RequiredArgsConstructor(access=AccessLevel.PROTECTED)
+    public static class Person6b {
+    private final long id;
+    private String name;
+    private int age;
+}
+```
+
+- ファクトリメソッドを定義する方法
+```java
+@NoArgsConstructor(staticName="create")
+@AllArgsConstructor(staticName="create")
+public static class Person7b {
+    private long id;
+    private String name;
+    private int age;
+}
+```
+
+`Person7b.create()` で呼び出すことができる
+
+
+- @NonNullと組み合わせる
+
+```java
+public class Person8 {
+
+    @RequiredArgsConstructor
+    public static class Person8a {
+        private long id;
+        @NonNull
+        private final String name;
+        private int age;
+    }
+}
+```
+
+以上で null を許容しなくできる
+
+# 終わりに
+まだまだ色々小技があると思いますが、ひとまずはこれくらいで。
 
 # References
 - https://blog.y-yuki.net/entry/2016/10/13/003000
