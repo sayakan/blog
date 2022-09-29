@@ -18,23 +18,23 @@ Windows で開発された Spring Boot アプリケーションを起動しよ�
 以下を M1 Mac で実行しようとすると os.detected.classifier が読み込めない
 
 ```xml
-            <plugin>
-                <groupId>org.xolstice.maven.plugins</groupId>
-                <artifactId>protobuf-maven-plugin</artifactId>
-                <version>0.6.1</version>
-                <extensions>true</extensions>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>test-compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <protocArtifact>com.google.protobuf:protoc:3.7.0:exe:${os.detected.classifier}</protocArtifact>
-                </configuration>
-            </plugin>
+<plugin>
+    <groupId>org.xolstice.maven.plugins</groupId>
+    <artifactId>protobuf-maven-plugin</artifactId>
+    <version>0.6.1</version>
+    <extensions>true</extensions>
+    <executions>
+        <execution>
+            <goals>
+                <goal>compile</goal>
+                <goal>test-compile</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <protocArtifact>com.google.protobuf:protoc:3.7.0:exe:${os.detected.classifier}</protocArtifact>
+    </configuration>
+</plugin>
 ```
 
 # 解決策
