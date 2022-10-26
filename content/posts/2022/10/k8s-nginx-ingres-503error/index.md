@@ -53,7 +53,7 @@ spec:
 ```
 
 #　終わりに
-マニフェストを更新しようとすると以下のようなエラーが出たんだけど[こちら](https://shunyaueta.com/posts/2021-12-02/)を参考に Development を削除すれば解消できた。
+マニフェストを更新しようとすると以下のようなエラーが出たんだけど[こちら](https://shunyaueta.com/posts/2021-12-02/)を参考に Development を削除して apply し直せば解消できた。
 ```
 The Deployment "server-deployment" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string{"component":"server"}, MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: field is immutable
 ```
