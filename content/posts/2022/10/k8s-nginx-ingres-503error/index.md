@@ -52,7 +52,21 @@ spec:
 ...
 ```
 
+#　終わりに
+マニフェストを更新しようとすると以下のようなエラーが出たんだけど[こちら](https://shunyaueta.com/posts/2021-12-02/)を参考に Development を削除すれば解消できた。
+```
+The Deployment "server-deployment" is invalid: spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]string{"component":"server"}, MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: field is immutable
+```
+
+- Development 削除
+```
+kubectl delete deploy server-deployment
+```
+
 
 # References
 > ラベル(Labels) はPodなどのオブジェクトに割り当てられたキーとバリューのペア
 > https://kubernetes.io/ja/docs/concepts/overview/working-with-objects/labels/
+
+- https://serverfault.com/questions/1068310/how-to-solve-error-503-in-kubernetes-nginx-ingress
+  - 他の対処法
