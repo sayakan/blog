@@ -20,7 +20,105 @@ Java のマルチスレッドや非同期処理、並列処理の仕様につい
 2. Runnable インターフェースを実装する
 
 ## Example: Runnable インターフェースを実装してみる
-今回は使い方2である Runnable インターフェースを用いて実装した。
+今回は使い方2である Runnable インターフェースを用いて実装した。コード量が多く、Service クラスや Domain クラスは省いているためこのまま実行はできないことに留意。
+
+```java
+public class ProductServiceUsingThread {
+    private ProductInfoService productInfoService;
+    private ReviewService reviewService;
+
+    public ProductServiceUsingThread(ProductInfoService productInfoService, ReviewService reviewService) {
+        this.productInfoService = productInfoService;
+        this.reviewService = reviewService;
+    }
+
+    public Product retrieveProductDetails(String productId) throws InterruptedException {
+        stopWatch.start();
+        ProductServiceUsingThread.ProductInfoRunnable productInfoRunnable = new ProductServiceUsingThread.ProductInfoRunnable(productId);
+        Thread productInfoThread = new Thread(productInfoRunnable);
+
+        ProductServiceUsingThread.ReviewRunnable reviewRunnable = new ProductServiceUsingThread.ReviewRunnable(productId);
+        Thread reviewThread = new Thread(reviewRunnable);
+
+        // start functionalities as background tasks
+        productInfoThread.start();
+        reviewThread.start();
+
+        // join will wait tasks until productInfoThread will complete.
+        productInfoThread.join();
+        // reviewThread as well
+        reviewThread.join();
+
+        // once came here, it means the tasks already completed
+        ProductInfo productInfo = productInfoRunnable.getProductInfo();
+        Review review = reviewRunnable.getReview();
+
+        stopWatch.stop();
+        log("Total Time Taken : "+ stopWatch.getTime());
+        return new Product(productId, productInfo, review);
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        ProductInfoService productInfoService = new ProductInfoService();
+        ReviewService reviewService = new ReviewService();
+        ProductServiceUsingThread productService = new ProductServiceUsingThread(productInfoService, reviewService);
+        String productId = "ABC123";
+        Product product = productService.retrieveProductDetails(productId);
+        log("Product is " + product);
+
+    }
+
+    // Thread を使ってサービスを呼び出す用のクラス
+    private class ProductInfoRunnable implements Runnable {
+        private ProductInfo productInfo;
+        private String productId;
+        public ProductInfoRunnable(String productId) {
+            this.productId = productId;
+        }
+
+        public ProductInfo getProductInfo() {
+            return productInfo;
+        }
+
+        @Override
+        public void run() {
+            productInfo = productInfoService.retrieveProductInfo(productId);
+        }
+    }
+
+    // Thread を使ってサービスを呼び出す用のクラス
+    private class ReviewRunnable implements Runnable {
+        private String productId;
+        private Review review;
+        public ReviewRunnable(String productId) {
+            this.productId = productId;
+        }
+
+        public Review getReview() {
+            return review;
+        }
+
+        @Override
+        public void run() {
+            review = reviewService.retrieveReviews(productId);
+        }
+    }
+}
+```
+
+- 実行結果は以下となる。
+
+```log
+> Task :ProductServiceUsingThread.main()
+[main] - Total Time Taken : 1012
+[main] - Product is Product(productId=ABC123, productInfo=ProductInfo(productId=ABC123, productOptions=[ProductOption(productionOptionId=1, size=64GB, color=Black, price=699.99, inventory=null), ProductOption(productionOptionId=2, size=128GB, color=Black, price=749.99, inventory=null)]), review=Review(noOfReviews=200, overallRating=4.5))
+
+BUILD SUCCESSFUL in 1s
+2 actionable tasks: 2 executed
+```
+
+- コード例では省いているが、ReviewService クラス、ProductInfoService クラスで `delay(1000);` 処理を実行している。
+- それによって各サービスで最低1秒は遅延が発生するのだが、実行時間が 1012 しか経っていないことから並列で処理できているとわかる。
 
 ## ExecutorService
 
