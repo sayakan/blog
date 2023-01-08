@@ -172,7 +172,7 @@ integerList.parallelStream() // ①開始操作
 ```
 
 ## CompletableFuture
-- 長くなったため[別記事](../../2023/01/java-completablefuture.md)に移動
+- 長くなったため[別記事](../../../2023/01/java-completablefuture.md)に移動
 
 
 # References
